@@ -1,5 +1,5 @@
 #Make file belonging to pyPractic2 folder
-folder1:=abswpch01#folder for each chapter#UPDATE HERE
+folder1:=abswpch02#folder for each chapter#UPDATE HERE
 folder2a:=$(folder1)e#Example section of chapter 
 folder2b:=$(folder1)q#Questions section of chapter
 folder2c:=$(folder1)p#Projects section of chapter
@@ -9,7 +9,8 @@ ffolder:=$(folder1)/$(folder2a)/$(folder)#UPDATE HERE
 file1:=.ipynb
 file2:=.py
 file3:=.md
-file:=$(folder)01$(file1)#UPDATE HERE
+num:=#UPDATE HERE
+file:=$(folder)$(num)$(file1)#UPDATE HERE
 
 crt1:
 	mkdir $(folder1)
@@ -24,6 +25,9 @@ crt1:
 crt2:#folder and file for each example or project
 	mkdir $(folder1)/$(folder2a)/$(folder)
 	cat jntemplate.ipynb > $(folder)/$(file)
+
+crt3:#File for question section
+	cat jntemplate.ipynb > $(folder1)/$(folder2b)/$(folder2b)$(file1)
 
 conv:#Can use --to python, --to=python
 	jupyter nbconvert --to script $(ffolder)/$(ffolder).ipynb

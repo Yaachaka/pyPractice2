@@ -18,6 +18,12 @@ Automate the Boring Stuff With Python: Practical Programming for Total Beginners
 - .md - markdown file converted from jupyter notebook.
 
 ---
+***Tools used:***
+- VS code
+- Cygwin64 (mintty)
+- Jupyter notebook
+
+---
 ### About the Author
 Al Sweigart is a software developer and tech book author living in San Francisco. Python is his favorite programming language, and he is the developer of several open source modules for it. His other books are freely available under a Creative Commons license on his website http://www.inventwithpython.com/ or visit his blog http://www.inventwithpython.com/blog/
 
@@ -26,6 +32,9 @@ Al Sweigart is a software developer and tech book author living in San Francisco
 
 ---
 [abswpch01](abswpch01): Python Basics
+
+---
+[abswpch02](abswpch02): Flow control
 
 ---
 ## II. Automating Tasks
