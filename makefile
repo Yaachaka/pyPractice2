@@ -35,5 +35,8 @@ conv:#Can use --to python, --to=python
 	
 startt:#Start jupyter
 	run "C:\Program Files\Google\Chrome\Application\chrome.exe" -incognito /c
-	jupyter notebook --no-browser
+	jupyter notebook --no-
+	
+glog:
+	git log --graph --oneline -6
 	
