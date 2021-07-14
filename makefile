@@ -1,5 +1,5 @@
 #Make file belonging to pyPractic2 folder
-folder1:=abswpch03#folder for each chapter#UPDATE HERE
+folder1:=abswpch04#folder for each chapter#UPDATE HERE
 folder2a:=$(folder1)e#Example section of chapter 
 folder2b:=$(folder1)q#Questions section of chapter
 folder2c:=$(folder1)p#Projects section of chapter
@@ -29,8 +29,12 @@ crt2:#folder and file for each example or project
 crt3:#File for question section
 	cat jntemplate.ipynb > $(folder1)/$(folder2b)/$(folder2b)$(file1)
 
+crt4:#Create a python file using a template
+	cat  template1.txt > $(ffolder)/$(folder)$(file2)
+	code $(ffolder)/$(folder)$(file2)
+
 conv:#Can use --to python, --to=python
-	jupyter nbconvert --to script --no-prompt $(ffolder)/$(file)
+	#jupyter nbconvert --to script --no-prompt $(ffolder)/$(file)
 	jupyter nbconvert --to markdown $(ffolder)/$(file)
 	
 startt:#Start jupyter
@@ -40,6 +44,4 @@ startt:#Start jupyter
 glog:
 	git log --graph --oneline -6
 
-cd2:
-	echo "cd $(ffolder)" > cmds.txt
 	
