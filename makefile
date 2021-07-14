@@ -1,10 +1,10 @@
 #Make file belonging to pyPractic2 folder
-folder1:=abswpch02#folder for each chapter#UPDATE HERE
+folder1:=abswpch03#folder for each chapter#UPDATE HERE
 folder2a:=$(folder1)e#Example section of chapter 
 folder2b:=$(folder1)q#Questions section of chapter
 folder2c:=$(folder1)p#Projects section of chapter
-folder:=$(folder2c)01#Folder for individual exercise or project#UPDATE HERE
-ffolder:=$(folder1)/$(folder2a)/$(folder)#UPDATE HERE
+folder:=$(folder2c)02#Folder for individual exercise or project#UPDATE HERE
+ffolder:=$(folder1)/$(folder2c)/$(folder)#UPDATE HERE
 
 file1:=.ipynb
 file2:=.py
@@ -23,20 +23,23 @@ crt1:
 	echo '<!--This file located in '$(folder1)/$(folder2c)'-->' > $(folder1)/$(folder2c)/README.md
 
 crt2:#folder and file for each example or project
-	mkdir $(folder1)/$(folder2a)/$(folder)
-	cat jntemplate.ipynb > $(folder)/$(file)
+	mkdir $(ffolder)
+	cat jntemplate.ipynb > $(ffolder)/$(file)
 
 crt3:#File for question section
 	cat jntemplate.ipynb > $(folder1)/$(folder2b)/$(folder2b)$(file1)
 
 conv:#Can use --to python, --to=python
-	jupyter nbconvert --to script $(ffolder)/$(ffolder).ipynb
-	jupyter nbconvert --to markdown $(ffolder)/$(ffolder).ipynb
+	jupyter nbconvert --to script --no-prompt $(ffolder)/$(file)
+	jupyter nbconvert --to markdown $(ffolder)/$(file)
 	
 startt:#Start jupyter
 	run "C:\Program Files\Google\Chrome\Application\chrome.exe" -incognito /c
-	jupyter notebook --no-
+	jupyter notebook --no-browser
 	
 glog:
 	git log --graph --oneline -6
+
+cd2:
+	echo "cd $(ffolder)" > cmds.txt
 	

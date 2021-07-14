@@ -37,6 +37,9 @@ Al Sweigart is a software developer and tech book author living in San Francisco
 [abswpch02](abswpch02): Flow control
 
 ---
+[abswpch03](abswpch03): Functions
+
+---
 ## II. Automating Tasks
 
 
